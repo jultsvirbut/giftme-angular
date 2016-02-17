@@ -1,10 +1,10 @@
 export class GiftsController {
-	constructor (giftsProducts, toastr) {
+	constructor (giftBox, toastr) {
 		'ngInject';
 
 		this.title = 'Hello, Holi Cow';
 		this.inputTitle = 'Default';
-		this.giftProducts = giftsProducts.getList();
+		this.giftBox = giftBox.getList();
 		this.classAnimation = '';
 		this.toastr = toastr;
 	}

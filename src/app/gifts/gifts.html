@@ -17,7 +17,7 @@
 
 
 	<md-list>
-	<md-list-item class="md-3-line" ng-repeat="gift in gift.giftProducts">
+	<md-list-item class="md-3-line" ng-repeat="gift in gift.giftBox">
         <div class="md-list-item-text" layout="column">
         	<h3>{{ gift.enName }}</h3>
         	<h4>{{ gift.price }}</h4> 
@@ -26,15 +26,7 @@
 	</md-list>
 
 
-	<div class="techs" layout-align="center">
-		<h2>ALL BOXES</h2>
-    	<md-card ng-repeat="gift in gift.giftProducts">
-        	<md-card-content>
-        		<h3 class="md-title">{{ gift.enName }}</h3>
-        		<p>{{ gift.price }}</p>
-        	</md-card-content>
-     	</md-card>
-    </div>
+
 
 	</md-content>
 

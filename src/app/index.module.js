@@ -7,7 +7,7 @@ import { MainController } from './main/main.controller';
 import { GiftsController } from './gifts/gifts.controller';
 import { GithubContributorService } from '../app/components/githubContributor/githubContributor.service';
 import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
-import { GiftsProductsService } from './gifts/giftsProducts.service';
+import { GiftBoxService } from './gifts/giftsProducts.service';
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 import { MalarkeyDirective } from '../app/components/malarkey/malarkey.directive';
 
@@ -19,7 +19,7 @@ angular.module('generatorGulpAngular', ['ngResource', 'ui.router', 'ngMaterial',
   .run(runBlock)
   .service('githubContributor', GithubContributorService)
   .service('webDevTec', WebDevTecService)
-  .service('giftsProducts', GiftsProductsService)
+  .service('giftBox', GiftBoxService)
   .controller('MainController', MainController)
   .controller('GiftsController', GiftsController)
   .directive('acmeNavbar', NavbarDirective)
