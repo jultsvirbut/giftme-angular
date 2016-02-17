@@ -1,0 +1,41 @@
+<div layout="vertical" layout-fill>
+	<md-content>
+
+	<h1>All gifts</h1>
+
+	<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+
+	<md-input-container>
+    	<label>Simple input</label>
+    	<input ng-model="gift.inputTitle">
+    </md-input-container>
+
+    <md-button class="md-raised" ng-click="gift.showToastr()">Submit</md-button>
+
+	</section>
+
+
+
+	<md-list>
+	<md-list-item class="md-3-line" ng-repeat="gift in gift.giftProducts">
+        <div class="md-list-item-text" layout="column">
+        	<h3>{{ gift.enName }}</h3>
+        	<h4>{{ gift.price }}</h4> 
+        </div>
+      </md-list-item>
+	</md-list>
+
+
+	<div class="techs" layout-align="center">
+		<h2>ALL BOXES</h2>
+    	<md-card ng-repeat="gift in gift.giftProducts">
+        	<md-card-content>
+        		<h3 class="md-title">{{ gift.enName }}</h3>
+        		<p>{{ gift.price }}</p>
+        	</md-card-content>
+     	</md-card>
+    </div>
+
+	</md-content>
+
+</div>
