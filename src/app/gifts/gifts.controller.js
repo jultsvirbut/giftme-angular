@@ -4,7 +4,7 @@ export class GiftsController {
 
 		this.title = 'Hello, Holi Cow';
 		this.inputTitle = 'Default';
-		this.giftBox = giftBox.getList();
+		this.giftBoxes = giftBox.getList();
 		this.classAnimation = '';
 		this.toastr = toastr;
 	}

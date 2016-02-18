@@ -1,7 +1,8 @@
 export class GiftBoxService {
-  constructor () {
+  constructor ($q) {
     'ngInject';
 
+    this.$q = $q;
     this.boxes = [
         { enName: 'GiftMe Colours',
           section: '<a href="#large_boxes">Large</a>',
@@ -48,6 +49,7 @@ export class GiftBoxService {
   }
 
   getList() {
-    return this.boxes;
+    return this.$q.when(this.boxes);
   }
 }
+
