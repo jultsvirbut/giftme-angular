@@ -2,20 +2,6 @@
 	<md-content>
 
 	<h1>All gifts</h1>
-
-	<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-
-	<md-input-container>
-    	<label>Simple input</label>
-    	<input ng-model="gift.inputTitle">
-    </md-input-container>
-
-    <md-button class="md-raised" ng-click="gift.showToastr()">Submit</md-button>
-
-	</section>
-
-
-
 	<md-list>
 	<md-list-item class="md-3-line" ng-repeat="gift in gift.giftBoxes">
         <div class="md-list-item-text" layout="column">
@@ -24,9 +10,6 @@
         </div>
       </md-list-item>
 	</md-list>
-
-
-
 
 	</md-content>
 

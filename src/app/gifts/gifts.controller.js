@@ -2,16 +2,15 @@ export class GiftsController {
 	constructor (giftBox, toastr) {
 		'ngInject';
 
-		this.title = 'Hello, Holi Cow';
-		this.inputTitle = 'Default';
-		this.giftBoxes = giftBox.getList();
-		this.classAnimation = '';
-		this.toastr = toastr;
+		this.giftBox = giftBox;
+		this.activate();
 	}
 
-
-	showToastr() {
-		this.toastr.info('First toast');
+	activate() {
+	    this.giftBox.getList()
+	      .then(giftBoxes => {
+	        this.giftBoxes = giftBoxes;
+	      })
 	}
 
 }
