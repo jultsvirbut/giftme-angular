@@ -3,15 +3,15 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: 'app/main/main.html',
-      controller: 'MainController',
-      controllerAs: 'main'
-    })
-    .state('gift', {
-      url: '/gifts',
       templateUrl: 'app/gifts/gifts.html',
       controller: 'GiftsController',
       controllerAs: 'gift'
+    })
+    .state('example', {
+      url: '/example',
+      templateUrl: 'app/main/main.html',
+      controller: 'MainController',
+      controllerAs: 'main'
     });
 
   $urlRouterProvider.otherwise('/');

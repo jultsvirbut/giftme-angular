@@ -1,16 +1,16 @@
 export class GiftsController {
-	constructor (giftBox, toastr) {
+	constructor (giftBox) {
 		'ngInject';
 
-		this.giftBox = giftBox;
+		this.GiftBox = giftBox;
 		this.activate();
 	}
 
 	activate() {
-	    this.giftBox.getList()
-	      .then(giftBoxes => {
-	        this.giftBoxes = giftBoxes;
-	      })
+		this.GiftBox.getList()
+			.then(giftBoxes => {
+				this.giftBoxes = giftBoxes;
+			})
 	}
 
 }

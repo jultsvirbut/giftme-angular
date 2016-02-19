@@ -1,16 +1,29 @@
-<div layout="vertical" layout-fill>
-	<md-content>
+<md-toolbar>
+	<h1>Gifts</h1>
+</md-toolbar>
 
-	<h1>All gifts</h1>
-	<md-list>
-	<md-list-item class="md-3-line" ng-repeat="gift in gift.giftBoxes">
-        <div class="md-list-item-text" layout="column">
-        	<h3>{{ gift.enName }}</h3>
-        	<h4>{{ gift.price }}</h4> 
-        </div>
-      </md-list-item>
-	</md-list>
 
-	</md-content>
+<md-content flex>
 
-</div>
+
+<md-grid-list 
+	md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6"
+	md-row-height-gt-md="1:1" md-row-height="2:2"
+	md-gutter="12px" md-gutter-gt-sm="8px" >
+
+    <md-grid-tile class="green" ng-repeat="gift in gift.giftBoxes">
+      <md-grid-tile-footer>
+        <h3>{{ gift.enName }}</h3>
+        <h4>{{ gift.price }}</h4> 
+      </md-grid-tile-footer>
+    </md-grid-tile>
+
+</md-grid-list>
+
+</md-content>
+
+  <style type="text/css">
+    .green { background: #b9f6ca; }
+    md-grid-list { margin: 8px; }
+    md-grid-tile { transition: all 400ms ease-out 50ms; }
+  </style>
