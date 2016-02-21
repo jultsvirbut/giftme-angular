@@ -1,17 +1,12 @@
-<md-toolbar>
-	<h1>Gifts</h1>
-</md-toolbar>
-
-
-<md-content flex>
-
+<md-content flex >
 
 <md-grid-list 
 	md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6"
 	md-row-height-gt-md="1:1" md-row-height="2:2"
 	md-gutter="12px" md-gutter-gt-sm="8px" >
 
-    <md-grid-tile class="green" ng-repeat="gift in gift.giftBoxes">
+    <md-grid-tile md-rowspan="2" md-colspan="2" md-colspan-sm="1" ng-repeat="gift in gift.giftBoxes">
+       <a href="" class="thumb"><img ng-src="{{gift.imageUrl}}" alt="{{gift.enName}}"></a>
       <md-grid-tile-footer>
         <h3>{{ gift.enName }}</h3>
         <h4>{{ gift.price }}</h4> 
@@ -23,7 +18,13 @@
 </md-content>
 
   <style type="text/css">
-    .green { background: #b9f6ca; }
     md-grid-list { margin: 8px; }
     md-grid-tile { transition: all 400ms ease-out 50ms; }
+    
+    .thumb img {
+    	width: 344px;
+    	height: 344px;
+  		max-width: 100%; 
+  		max-height: 100%;   
+	}
   </style>
